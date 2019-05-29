@@ -5,8 +5,11 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int PlayerType;
     public int HP;
+    public int Synchro = 0;
+    private string Sis;
+
+    public GameObject[] Players = new GameObject[2];
     void Start()
     {
         
@@ -15,17 +18,20 @@ public class PlayerMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.UpArrow)){
-            this.transform.position += new Vector3(0,1,0);
+        if(Input.anyKeyDown){
+            Move();
+            TurnController.ChangeTurn();
         }
-        if(Input.GetKeyDown(KeyCode.LeftArrow)){
-            this.transform.position += new Vector3(-1,0,0);
-        }
-        if(Input.GetKeyDown(KeyCode.DownArrow)){
-            this.transform.position += new Vector3(0,-1,0);
-        }
-        if(Input.GetKeyDown(KeyCode.RightArrow)){
-            this.transform.position += new Vector3(1,0,0);
+    }
+    void Move(){
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+        Players[TurnController.CheckTurn()].transform.position += new Vector3(x,y,0);
+        if(TurnController.CheckTurn()==0){Sis = Input.inputString;}
+        if(TurnController.CheckTurn()==1){
+            if(Input.inputString==Sis){
+                Synchro++;
+            }
         }
     }
 }

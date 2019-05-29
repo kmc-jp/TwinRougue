@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\PlayerMover.cs" />
      <Compile Include="Assets\Scripts\SceneNameAttribute.cs" />
+     <Compile Include="Assets\Scripts\TurnController.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/poketyuu/Twin_Rougue/TwinRougue/Twin_Rougue/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
