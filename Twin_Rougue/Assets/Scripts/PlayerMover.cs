@@ -29,9 +29,9 @@ public class PlayerMover : MonoBehaviour
         Players[TurnController.CheckTurn()].transform.position += new Vector3(x,y,0);
         if(TurnController.CheckTurn()==0){Sis = Input.inputString;}
         if(TurnController.CheckTurn()==1){
-            if(Input.inputString==Sis){
-                Synchro++;
-            }
+            int n = (Sis == Input.inputString)?1:-10;
+            Players[0].SendMessage("ChangeMP",n);
+            Players[1].SendMessage("ChangeMP",n);
         }
     }
 }

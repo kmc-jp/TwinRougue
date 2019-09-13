@@ -213,6 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 138761463}
   - component: {fileID: 138761462}
+  - component: {fileID: 138761464}
   m_Layer: 0
   m_Name: Ane
   m_TagString: Untagged
@@ -282,6 +283,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &138761464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138761461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7c5dcccae0d5494c84f756aae224eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _HP: 100
+  _MP: 100
 --- !u!1 &331624771
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331624773}
   - component: {fileID: 331624772}
+  - component: {fileID: 331624774}
   m_Layer: 0
   m_Name: Imouto
   m_TagString: Untagged
@@ -361,6 +377,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331624774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331624771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7c5dcccae0d5494c84f756aae224eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _HP: 100
+  _MP: 100
 --- !u!1 &539994925
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,8 +447,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b0fa9ed3654428d91381cc7787beeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerType: 0
   HP: 0
+  Synchro: 0
   Players:
   - {fileID: 138761461}
   - {fileID: 331624771}
