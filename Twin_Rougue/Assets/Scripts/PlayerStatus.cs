@@ -28,9 +28,13 @@ public class PlayerStatus : MonoBehaviour
             if(value > MaxMP)_MP=MaxMP;
         }
     }
+
+    public PlayerAction Pa1 { get => Pa; set => Pa = value; }
+
+    PlayerAction Pa;
     void Start()
     {
-        
+        Pa = GetComponent<PlayerAction>();
     }
 
     // Update is called once per frame

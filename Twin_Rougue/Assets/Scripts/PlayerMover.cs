@@ -27,7 +27,6 @@ public class PlayerMover : MonoBehaviour
     void Move(){
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
-        
         if(TurnController.CheckTurn()==0){
             Sis = Input.inputString;
             SisMove[0] = new Vector3(x, y, 0);
