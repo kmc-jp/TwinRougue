@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
     // Start is called before the first frame update
     public static int MaxHP = 100;
     public int _HP = MaxHP;
+    public Slider HPSlider;
     public int HP{
         get{ return _HP;}
         set{
@@ -20,6 +22,7 @@ public class PlayerStatus : MonoBehaviour
     }
     public static int MaxMP = 100;
     public int _MP = MaxMP;
+    public Slider MPSlider;
     public int MP{
         get{return _MP;}
         set{
@@ -35,6 +38,8 @@ public class PlayerStatus : MonoBehaviour
     void Start()
     {
         Pa = GetComponent<PlayerAction>();
+        //HPSlider = GameObject.GetComponent<Slider>();
+        //MPSlider = GameObject.GetComponent<Slider>();
     }
 
     // Update is called once per frame
@@ -44,8 +49,10 @@ public class PlayerStatus : MonoBehaviour
     }
     public void ChangeMP(int mp){
         MP += mp;
+        MPSlider.value = MP;
     }
     public void ChangeHP(int hp){
         HP += hp;
+        HPSlider.value = HP;
     }
 }
